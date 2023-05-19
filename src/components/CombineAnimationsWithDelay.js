@@ -4,6 +4,7 @@ import styles from "../css/AnimateProperties.module.css";
 export default function CombineAnimationsWithDelay() {
   const boxRef = useRef(null);
 
+  //An example of combining multiple combined animations
   const startAnimation = useCallback(async () => {
     /** Start sequence animation */
 
