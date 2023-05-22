@@ -1,0 +1,18 @@
+.container {
+  flex: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  background-color: tomato;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
