@@ -18,36 +18,22 @@ export default function FourCorners() {
     };
 
     // start sequence animation
+    //because transform is affected by margin, padding and other flow control rules you can avoid
+    // using it and just use the left and top rules to properly position your element
     const moveDown = boxRef.current.animate(
-      { transform: [`translateY(${height - boxDimens.current.height}px)`] },
+      { top: [`${height - boxDimens.current.height}px`] },
       options
     );
     await moveDown.finished;
     const moveRight = boxRef.current.animate(
-      { transform: [`translateX(${width - boxDimens.current.width}px)`] },
+      { left: [`${width - boxDimens.current.width}px`] },
       { ...options, composite: "accumulate" }
     );
     await moveRight.finished;
-    const moveUp = boxRef.current.animate(
-      {
-        transform: [
-          `translateY(${height - boxDimens.current.height}px)`,
-          "translateY(0px)",
-        ],
-      },
-      { ...options, composite: "accumulate" }
-    );
+    const moveUp = boxRef.current.animate({ top: ["0px"] }, options);
     await moveUp.finished;
     // // moveLeft
-    boxRef.current.animate(
-      {
-        transform: [
-          `translateX(${width - boxDimens.current.width}px)`,
-          "translateX(0px)",
-        ],
-      },
-      { ...options, composite: "accumulate" }
-    );
+    boxRef.current.animate({ left: ["0px"] }, options);
     //end sequence animation
   }, []);
 
