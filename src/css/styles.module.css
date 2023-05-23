@@ -1,0 +1,26 @@
+.container {
+  flex: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.head {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  /* position of absolute make sure the items are free floating; So the heads will stack on top of each other */
+  align-items: center;
+  justify-content: center;
+  /**
+  * FYI: the alignItems and justifyCOntent of center will actually work 
+  * even though our element has a position of absolute because we did not
+  *  specify the top, left, right, bottom attributes
+  */
+}
