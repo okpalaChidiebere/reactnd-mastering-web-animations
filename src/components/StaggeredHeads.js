@@ -43,6 +43,7 @@ export default function StaggeredHeads() {
 
       // Now we control the other heads to stagger to wherever you drag the first head
       // each head will happen separately
+      //use slice(1) to skip the first head which is our drag head
       heads.slice(1).forEach(
         //we did not pick the first head because we are not staggering it
         ({ ref }, index) => {
@@ -68,6 +69,11 @@ export default function StaggeredHeads() {
     // stop moving when mouse button is released:
     document.onmouseup = null;
     document.onmousemove = null;
+
+    /**
+     * We do not do anything in our onEnd but theoretically you could animate and
+     * lock a head to either the left or right side depending on it's position.
+     */
   }, []);
 
   const onStart = useCallback(
