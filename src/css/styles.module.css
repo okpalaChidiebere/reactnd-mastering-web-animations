@@ -1,0 +1,106 @@
+.container {
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.top {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.buttonBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 10px;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 20px;
+  padding: 20px;
+  border-radius: 30px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+.yupButton {
+  box-shadow: 0px 0px 5px green;
+}
+.nopeButton {
+  box-shadow: 0px 0px 5px red;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 300px;
+  position: fixed;
+  border-radius: 3px;
+  border-width: 1px;
+  border-color: #fff;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  user-select: none;
+}
+
+.lowerText {
+  display: flex;
+  flex: 1;
+  background-color: #fff;
+  padding: 5px;
+  pointer-events: none; /* we want pointer events on the whole card and not the card contents*/
+}
+.image {
+  display: flex;
+  border-radius: 2px;
+  flex: 3;
+  object-fit: cover;
+  object-position: 50% 50%;
+  pointer-events: none; /* we want pointer events on the whole card and not the card contents*/
+}
+
+.yup {
+  border-color: green;
+  border-width: 2px;
+  position: absolute;
+  padding: 20px;
+  border-radius: 5px;
+  top: 20px;
+  left: 20px;
+  background-color: #fff;
+  opacity: 0; /* initially hidden */
+  transform: rotate(30deg) scale(0.5);
+}
+
+.yupText {
+  font-size: 16;
+  color: green;
+}
+
+.nope {
+  border-color: red;
+  border-width: 2px;
+  position: absolute;
+  padding: 20px;
+  border-radius: 5;
+  right: 20px;
+  top: 20px;
+  background-color: #fff;
+  opacity: 0; /* initially hidden */
+  transform: rotate(-30deg) scale(0.5);
+}
+
+.nopeText {
+  font-size: 16;
+  color: red;
+}
