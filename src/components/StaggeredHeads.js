@@ -37,9 +37,18 @@ export default function StaggeredHeads() {
       e.preventDefault();
       // we use the coords of the mousedown event
 
+      const translateX = e.clientX - translateXY.current.x; //dx
+      const translateY = e.clientY - translateXY.current.y; //dy
+      const animatedStyles = {
+        top: `${translateY}px`,
+        left: `${translateX}px`,
+      }; //keyframes
+
       // set drag on the first item
-      e.target.style.top = `${e.clientY - translateXY.current.y}px`;
-      e.target.style.left = `${e.clientX - translateXY.current.x}px`;
+      e.target.animate(animatedStyles, {
+        duration: 0.0000000000000001, //as fast a possible
+        fill: "forwards",
+      });
 
       // Now we control the other heads to stagger to wherever you drag the first head
       // each head will happen separately
@@ -47,28 +56,22 @@ export default function StaggeredHeads() {
       heads.slice(1).forEach(
         //we did not pick the first head because we are not staggering it
         ({ ref }, index) => {
-          ref.current.animate(
-            {
-              left: [`${e.clientX - translateXY.current.x}px`],
-              top: [`${e.clientY - translateXY.current.y}px`],
-            },
-            {
-              duration: 150,
-              easing: "cubic-bezier(.91,.8,.54,1.39)", //bounce
-              fill: "both",
-              delay: index * 10, // this delay will cause the stagger effect because it will delay a certain amount based on the head position
-            }
-          );
+          ref.current.animate(animatedStyles, {
+            duration: 150,
+            easing: "cubic-bezier(.91,.8,.54,1.39)", //bounce
+            fill: "both",
+            delay: index * 10, // this delay will cause the stagger effect because it will delay a certain amount based on the head position
+          });
         }
       );
     },
     [heads]
   );
 
-  const onEnd = useCallback(() => {
+  const onEnd = useCallback((e) => {
     // stop moving when mouse button is released:
-    document.onmouseup = null;
-    document.onmousemove = null;
+    e.target.onmouseup = null;
+    e.target.onmousemove = null;
 
     /**
      * We do not do anything in our onEnd but theoretically you could animate and
@@ -82,8 +85,9 @@ export default function StaggeredHeads() {
       // we store the point of click(coords)
       translateXY.current = { x: e.offsetX, y: e.offsetY };
 
-      document.onmousemove = onActive; // call a function whenever the cursor moves:
-      document.onmouseup = onEnd;
+      e.target.onmousemove = onActive;
+      e.target.onmouseup = onEnd;
+      e.target.onmouseleave = onEnd;
     },
     [onEnd, onActive]
   );
