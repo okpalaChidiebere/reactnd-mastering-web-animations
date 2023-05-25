@@ -1,0 +1,65 @@
+.container {
+  flex: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.absoluteFill {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #282c34;
+}
+
+.title {
+  font-size: 30px;
+  color: #fff;
+  background-color: transparent;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.form {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.25);
+  padding: 10px 0px; /*padding vertical*/
+  height: 45%;
+}
+
+.input {
+  width: 450px;
+  height: 45px;
+  padding: 0px 10px; /*padding horizontal*/
+  margin: 5px 0px;
+  border-width: 1px;
+  border-radius: 5px;
+  border-color: #fff;
+  color: #333;
+  background-color: #fff;
+  outline: none; /* we don't want the default browser outline when the input is focused. we can add our custom one*/
+  opacity: 0;
+}
+
+.button {
+  margin-top: 10px;
+  background-color: tomato;
+  padding: 10px 5px; /* paddingVertical: 10 and paddingHorizontal: 5 */
+  border-radius: 5px;
+  width: 476px;
+  opacity: 0;
+}
+
+.buttonText {
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+}
