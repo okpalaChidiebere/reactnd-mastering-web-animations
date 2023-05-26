@@ -1,0 +1,50 @@
+.container {
+  flex: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.button {
+  position: relative;
+  background-color: #e6537d;
+  border-radius: 2px;
+  align-items: center;
+  justify-content: center;
+  /* paddingHorizontal: 60;
+      padding-vertical: 10; */
+  padding: 10px 60px;
+  overflow: hidden;
+}
+.buttonText {
+  position: relative;
+  color: #fff;
+  font-size: 24px;
+  background-color: transparent;
+}
+/** Our progress Bar*/
+.progress {
+  position: absolute;
+  /**
+  * Placing this view left corner, lets us control the animated view to go
+  * left to right; top top to bottom, or just cover the bottom of the parent 
+  * container(StyleSheet.absoluteFill)
+  *  */
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+  width: 0%;
+  /* width: 100%;
+  background-color: #6347ff; */
+}
+
+.absoluteFill {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+}
