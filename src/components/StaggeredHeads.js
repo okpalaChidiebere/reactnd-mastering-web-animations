@@ -45,18 +45,16 @@ export default function StaggeredHeads() {
       }; //keyframes
 
       // set drag on the first item
-      e.target.animate(animatedStyles, {
-        duration: 0.0000000000000001, //as fast a possible
-        fill: "forwards",
-      });
+      e.target.style.top = animatedStyles.top;
+      e.target.style.left = animatedStyles.left;
 
       // Now we control the other heads to stagger to wherever you drag the first head
       // each head will happen separately
       //use slice(1) to skip the first head which is our drag head
-      heads.slice(1).forEach(
+      const animations = heads.slice(1).map(
         //we did not pick the first head because we are not staggering it
         ({ ref }, index) => {
-          ref.current.animate(animatedStyles, {
+          return ref.current.animate(animatedStyles, {
             duration: 150,
             easing: "cubic-bezier(.91,.8,.54,1.39)", //bounce
             fill: "both",
@@ -64,6 +62,13 @@ export default function StaggeredHeads() {
           });
         }
       );
+
+      Promise.all(animations.map((a) => a.finished)).then(() => {
+        animations.forEach((a) => {
+          a.commitStyles(); // you will see the styles get updated when you inspect the browser
+          a.cancel(); // clean up because we don't need to keep track :)
+        });
+      });
     },
     [heads]
   );
