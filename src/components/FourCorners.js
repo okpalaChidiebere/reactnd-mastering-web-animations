@@ -18,8 +18,6 @@ export default function FourCorners() {
     };
 
     // start sequence animation
-    //because transform is affected by margin, padding and other flow control rules you can avoid
-    // using it and just use the left and top rules to properly position your element
     const moveDown = boxRef.current.animate(
       { top: [`${height - boxDimens.current.height}px`] },
       options
@@ -32,9 +30,33 @@ export default function FourCorners() {
     await moveRight.finished;
     const moveUp = boxRef.current.animate({ top: ["0px"] }, options);
     await moveUp.finished;
-    // // moveLeft
+    // moveLeft
     boxRef.current.animate({ left: ["0px"] }, options);
     //end sequence animation
+
+    // Another way to achieve this
+    // const moveDown = boxRef.current.animate(
+    //   { transform: [`translateY(${height - boxDimens.current.height}px)`] },
+    //   options
+    // );
+    // await moveDown.finished;
+    // moveDown.commitStyles();
+    // moveDown.cancel();
+    // const moveRight = boxRef.current.animate(
+    //   { transform: [`translateX(${width - boxDimens.current.height}px)`] },
+    //   { ...options, composite: "accumulate" }
+    // );
+    // await moveRight.finished;
+    // moveRight.commitStyles();
+    // moveRight.cancel();
+    // const moveUp = boxRef.current.animate(
+    //   { transform: [`translateY(-${height - boxDimens.current.height}px)`] },
+    //   { ...options, composite: "accumulate" }
+    // );
+    // await moveUp.finished;
+    // moveUp.commitStyles();
+    // moveUp.cancel();
+    // boxRef.current.animate({ transform: [`translateX(${0}px)`] }, options);
   }, []);
 
   useEffect(() => {
