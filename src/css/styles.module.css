@@ -1,0 +1,93 @@
+.container {
+  flex: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row; /** this will allow us to lay our buttons out on the left and right sides */
+  justify-content: center;
+  align-items: stretch;
+  overflow: hidden;
+  background-color: #e22d4b;
+}
+
+.absoluteFill {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.option {
+  display: flex;
+  flex: 1; /* we want the button stretch the entire screen */
+  flex-direction: column;
+  justify-content: flex-end; /* we want our content to be at the end */
+  align-items: center; /* we want our content to be centered inside */
+  z-index: 1;
+  cursor: pointer;
+}
+
+/* activeOpacity of 0.7 when the button is clicked */
+.option:active {
+  opacity: 0.7;
+}
+
+.yes {
+  /* we want to distinguish between the yes and no button */
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.optionText {
+  font-size: 40px;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.overlay {
+  display: flex;
+  /** 
+    * we want to center our question in the middle of the screen and they have to be on thesame plane
+    * This means; as we animate the next question in; it needs to be in exact same stop that the question
+    *  being animated out left. To achieve this; we have to do some absolute positioning (look at styles.questionText) to make the items 
+    * flow correctly
+    */
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+  overflow: hidden; /* we want the next question to be hidden off the screen*/
+}
+
+.questionText {
+  font-size: 30px;
+  color: #fff;
+  text-align: center;
+  position: absolute; /* We want the layout of the questions to be independent so that we can position then how we fill */
+  padding: 0px 5px;
+}
+
+.progress {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  height: 10px;
+}
+
+.bar {
+  height: 100%;
+  background-color: #fff;
+  width: 0%; /* the bar will be at 0 from the start until the user starts answering questions */
+}
+
+.close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background-color: transparent;
+  z-index: 2;
+  cursor: pointer;
+}
+.closeText {
+  font-size: 30px;
+  color: #fff;
+}
