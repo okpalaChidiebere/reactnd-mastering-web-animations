@@ -7,3 +7,93 @@
   align-items: center;
   overflow: hidden;
 }
+
+.absoluteFill {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.button {
+  margin-top: 50px;
+  cursor: pointer;
+}
+
+.rowWrap {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row; /* the actionItems in the action view is arranged in a row direction */
+  align-items: center; /* center along the horizontal line */
+  min-width: 20%; /* cover at least 20% of our screen */
+  background-color: #fff;
+  border-radius: 20px; /* curved edges around the action view */
+  /* paddingHorizontal: 10; paddingVertical: 5; */
+  padding: 5px 10px;
+  /* offset-x | offset-y | blur-radius | spread-radius | color and opacity */
+  box-shadow: 2px 2px 3px 1.5px rgba(51, 51, 51, 0.2);
+  transform: translateY(150px) scale(0);
+}
+
+.colorBall {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%; /* makes it a perfect circle */
+  cursor: pointer;
+}
+
+.iconBtn {
+  border: none;
+  background-color: white;
+  opacity: 1;
+}
+
+.iconBtn:active {
+  opacity: 0.4;
+}
+
+.row {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-around; /* there will be even spaces around the actionView icons */
+  flex-direction: row;
+  overflow: hidden;
+}
+
+.colorRowWrap {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  padding: 5px 10px;
+  opacity: 0;
+}
+
+.input {
+  width: 74%;
+  padding-left: 25px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 15px;
+  opacity: 0;
+}
+
+.okayButton {
+  display: flex;
+  border-radius: 20px;
+  width: 40px;
+  height: 100%;
+  background-color: #309eeb;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-300px);
+  cursor: pointer;
+}
+
+.okayText {
+  color: #fff;
+  font-size: 14px;
+}
