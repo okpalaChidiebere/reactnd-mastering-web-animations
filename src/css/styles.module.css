@@ -1,0 +1,87 @@
+.container {
+  flex: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.absoluteFill {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonText {
+  color: #fff;
+}
+
+.editor {
+  position: relative;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 0.1);
+  /* properties to be animated */
+  width: 12%;
+}
+
+.bar {
+  position: relative;
+  display: flex;
+  background-color: #2979ff;
+  height: 50px;
+  justify-content: center;
+}
+
+.toolbar {
+  display: flex;
+  flex-direction: row;
+  padding: 0px 10px;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+  flex: 1;
+  /* properties to be animated */
+  opacity: 0;
+}
+
+.rightInnerBar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.lowerView {
+  position: relative;
+  overflow: hidden;
+  /* properties to be animated */
+  height: 0px;
+}
+
+.input {
+  padding: 10px;
+  font-size: 20px;
+  border: none;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.close {
+  color: #2979ff;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
