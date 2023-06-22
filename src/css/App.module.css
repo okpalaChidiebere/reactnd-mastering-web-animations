@@ -1,6 +1,4 @@
 .App {
-  display: flex;
-  flex: 1;
   margin: 0 auto;
-  padding: 0 1em;
+  padding: 0;
 }
