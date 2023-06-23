@@ -21,6 +21,7 @@
 .scrollDiv {
   overflow-x: scroll;
   display: flex;
+  /* enable paging */
   scroll-snap-type: x mandatory;
 }
 
@@ -43,10 +44,12 @@
 
 .image {
   object-fit: cover;
+  height: 100%;
 }
 
 .textWrap {
   background-color: rgba(0, 0, 0, 0.5);
+  /* paddingVertical: 10 */
   padding: 10px 0px;
   width: 100%;
   text-align: center;

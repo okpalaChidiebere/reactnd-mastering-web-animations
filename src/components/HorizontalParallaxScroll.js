@@ -2,6 +2,7 @@ import { useCallback, useRef } from "react";
 import styles from "../css/styles.module.css";
 import Moment from "./Moment";
 
+// ideally you will probably want to listen for screen width changes as well
 const { innerWidth: width } = window;
 
 const Images = [
@@ -11,7 +12,7 @@ const Images = [
   { image: require("../images/Image12.jpg"), title: "Strawberry DiaQuir" },
 ];
 
-const getAnimatedStyle = (scrollLeftPosition, i, elemRef) => {
+const setAnimatedStyle = (scrollLeftPosition, i, elemRef) => {
   //check the element is entering the screen
   const isEntering =
     scrollLeftPosition > 0 &&
@@ -35,7 +36,6 @@ const getAnimatedStyle = (scrollLeftPosition, i, elemRef) => {
          */
         [-300, 0, 150];
 
-  // the image will will hidden from the entrance and gradually go into full opacity and the element exits the screen it gradually fades out too
   const imageTranslateX = isEntering
     ? //entering range interpolation
       range(
@@ -55,15 +55,15 @@ const getAnimatedStyle = (scrollLeftPosition, i, elemRef) => {
 
 export default function HorizontalParallaxScroll() {
   const moments = useRef({});
-  const { container, scrollDiv } = styles;
+  const { absoluteFill, container, scrollDiv } = styles;
   return (
     <div className={container}>
       <div
-        className={scrollDiv}
+        className={[absoluteFill, scrollDiv].join(" ")}
         onScroll={useCallback((e) => {
           const scrollValue = e.target.scrollLeft;
           Object.values(moments.current).forEach((ref, index) => {
-            getAnimatedStyle(scrollValue, index, ref);
+            setAnimatedStyle(scrollValue, index, ref);
           });
         }, [])}
       >
