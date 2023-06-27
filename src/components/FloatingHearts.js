@@ -41,10 +41,12 @@ export default function FloatingHearts() {
         elem,
         {
           transform: [
+            // pop up effect
             `translateX(0px) translateY(${d}px) scale(0)`,
             `translateX(0px) translateY(${d * 0.95}px) scale(1.2)`,
             `translateX(0px)translateY(${d * 0.9}px) scale(1)`,
 
+            // wobble movement effect of the heart as it moves up the screen
             `translateX(15px) translateY(${d * 0.7}px) scale(1) `,
             `translateX(-15px) translateY(${d * 0.5}px) scale(1) `,
             `translateX(15px) translateY(${d * 0.3}px) scale(1) `,
@@ -53,7 +55,7 @@ export default function FloatingHearts() {
 
             `translateX(-15px) translateY(0px) scale(1) `,
           ],
-          opacity: [1, 0.75, 0.5, 0.25, 0, 0, 0, 0, 0],
+          opacity: [1, 0.75, 0.5, 0.25, 0, 0, 0, 0, 0], // the heart will be gradually fading and be completely faded away when its half way through the screen
           offset: [0, 0.05, 0.1, 0.3, 0.5, 0.7, 0.9, 0.95, 1],
         },
         { duration: 3000, fill: "forwards" }
