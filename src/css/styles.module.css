@@ -1,0 +1,47 @@
+.absoluteFill {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.container {
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex: 1;
+}
+
+.heart {
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  position: absolute;
+  overflow: hidden;
+}
+
+.heartShape {
+  width: 30px;
+  height: 45px;
+  position: absolute;
+  top: 0;
+  border-bottom-left-radius: 15px;
+  border-top-right-radius: 15px;
+  overflow: hidden;
+}
+
+.filledHeart {
+  background-color: #e31745;
+}
+
+.leftHeart {
+  transform: rotate(-45deg);
+  left: 5px;
+}
+
+.rightHeart {
+  transform: rotate(45deg);
+  right: 5px;
+}
