@@ -1,0 +1,74 @@
+.container {
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex: 1;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.heart {
+  background-color: transparent;
+  display: inline-block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  transform: rotate(-45deg);
+}
+
+.heart:before,
+.heart:after {
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+}
+
+.heart:before {
+  top: -25px;
+  left: 0;
+}
+
+.heart:after {
+  left: 25px;
+  top: 0;
+}
+
+.filledHeart {
+  background-color: #e31745;
+}
+
+.filledHeart:before,
+.filledHeart:after {
+  background-color: #e31745;
+}
+
+.emptyFill {
+  background-color: #fff;
+}
+
+.emptyFill:before,
+.emptyFill:after {
+  background-color: #fff;
+}
+
+.empty {
+  background-color: #ccc;
+}
+
+.empty:before,
+.empty:after {
+  background-color: #ccc;
+}
+
+.fit {
+  position: absolute;
+  width: 50px;
+  transform: rotate(0deg) scale(0.9);
+  height: 50px;
+}
