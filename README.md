@@ -4,17 +4,38 @@ This project was about understanding the basics of animating all the properties 
 
 I learned practical examples starting with a focus on basic examples and putting the basic knowledge we've acquired to use. Each example will slowly grew more complex until to more advanced animations
 
-## Available Scripts
+## Branches
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- `animate-property-opacity`
+- `animate-property-scale`
+- `animate-property-translate-position`
+- `animate-property-width-height`
+- `animate-property-absolute-position`
+- `animate-property-color-background-color`
+- `animate-property-rotation`
+- `animate-property-percentage-width-height`
+- `easing`
+- `combining-animations-parallel`
+- `combining-animations-sequence`
+- `combining-animations-stagger`
+- `combining-animations-multiple-animations-with-delay`
+- `swipe-gesture-controls`
+- `svg-path-morphing`
+- `brw-4-corners`
+- `brw-staggerd-heads`
+- ` brw-kitten-cards`
+- `brw-stagger-form-items`
+- `brw-animated-progress-bar-btn`
+- `brw-animated-questionaire-with-progress`
+- `arw-photo-grid-shared-element`
+- `arw-animated-color-picker`
+- `arw-floating-action-button-with-menu`
+- `arw-application-intro-screen`
+- `arw-evolving-write-button`
+- `arw-social-comment-with-swipe-away`
+- `arw-horizontal-parallax`
+- `arw-love-floating-hearts`
+- `arw-floating-hearts`
 
 ### Animation API and instance methods JS links
 
