@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# Mastering Web animations
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was about understanding the basics of animating all the properties in web styling. Moving on through understanding how to combine animations, and using animations with gestures
+
+I learned practical examples starting with a focus on basic examples and putting the basic knowledge we've acquired to use. Each example will slowly grew more complex until to more advanced animations
 
 ## Available Scripts
 
@@ -14,57 +16,42 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+### Animation API and instance methods JS links
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [Animation](https://developer.mozilla.org/en-US/docs/Web/API/Animation)
+- [AnimationEffect](https://developer.mozilla.org/en-US/docs/Web/API/AnimationEffect)
+- [KeyframeEffect](https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect)
+- [Keyframe Formats](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats)
+- [Element: getAnimations() method](https://developer.mozilla.org/en-US/docs/Web/API/Element/getAnimations)
+- [Element: animate() method](https://developer.mozilla.org/en-US/docs/Web/API/Element/animate)
+- [Using the Web Animations API: \*\*Everything you need to know](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API)
+- [Additive Animation with the Web Animations API](https://css-tricks.com/additive-animation-web-animations-api/)
 
-### `npm run build`
+### Web Gestures Useful links
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [Touch and mouse](https://web.dev/mobile-touchandmouse/)
+- [JS WheenEvent tutorial and examples](https://o7planning.org/12315/javascript-wheelevent)
+- [Take control of your scroll - customizing pull-to-refresh and overflow effects](https://developer.chrome.com/blog/overscroll-behavior/)
+- [Element: scrollend event](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollend_event)
+- [WheelEvent](https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent)
+- [CSS tricks: Scroll Animation](https://css-tricks.com/books/greatest-css-tricks/scroll-animation/)
+- [Element: mouseout event](https://developer.mozilla.org/en-US/docs/Web/API/Element/mouseout_event)
+- [Introduction to Touch events in JavaScript](http://www.javascriptkit.com/javatutors/touchevents.shtml)
+- [https://gist.github.com/SleepWalker/da5636b1abcbaff48c4d](https://gist.github.com/SleepWalker/da5636b1abcbaff48c4d)
+- [https://github.com/CodeSteppe/card-swiper](https://github.com/CodeSteppe/card-swiper)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Other Useful links to be used during animation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [Linear Interpolation Functions](https://www.trysmudford.com/blog/linear-interpolation-functions/)
+- [How to Get the Window’s Width on Resize in React](https://codingbeautydev.com/blog/react-get-window-width-on-resize/#google_vignette)
+- [How to Know when an Element Gets Visible in the Screen During Scrolling](https://usefulangle.com/post/113/javascript-detecting-element-visible-during-scroll)
+- [Determine if a snap-scroll element's snap scrolling event is complete](https://stackoverflow.com/questions/65952068/determine-if-a-snap-scroll-elements-snap-scrolling-event-is-complete)
+- [Get and set scroll position of an element](https://plainjs.com/javascript/styles/get-and-set-scroll-position-of-an-element-26/)
+- [Interpolate between two colours based on a percentage value JS](https://stackoverflow.com/questions/66123016/interpolate-between-two-colours-based-on-a-percentage-value)
+- [React Icons](https://www.npmjs.com/package/react-icons). You can explore for example [Material Icons](https://react-icons.github.io/react-icons/icons?name=md)
+- [How do I retrieve an HTML element's actual width and height?](https://stackoverflow.com/questions/294250/how-do-i-retrieve-an-html-elements-actual-width-and-height)
+- [Drag an element using JavaScript (Translating the position CSS3)](https://stackoverflow.com/questions/63610870/drag-an-element-using-javascript-translating-the-position-css3)
+- [Css animations](https://javascript.info/css-animations)
+- [How to check if any part of an element is out of the viewport with vanilla JS](https://gomakethings.com/how-to-check-if-any-part-of-an-element-is-out-of-the-viewport-with-vanilla-js/)
+- [Dynamically change background color on scroll](https://stackoverflow.com/questions/52637835/dynamically-change-background-color-on-scroll)
+- [Vanilla javascript draggable div within parent](https://stackoverflow.com/questions/63076404/vanilla-javascript-draggable-div-within-parent)
